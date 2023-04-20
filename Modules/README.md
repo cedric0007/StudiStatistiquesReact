@@ -1,3 +1,9 @@
+#  RUN AND CONNECT PORTS
+    docker rename XXX react_studi_statistiques
+    docker run --rm -it -p 82:3000 -d --name react_studi_statistiques studi_statistiques_react:latest
+    docker network connect studistatistiques_default react_studi_statistiques
+    docker network connect docker_dev react_studi_statistiques
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

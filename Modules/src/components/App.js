@@ -32,16 +32,16 @@ function App() {
 			
 			<h2 className='lmj-title'>Suivi des dépenses</h2>
 			<div className="App lmj-layout-inner"  >
-				<StackedBar titreGraphique="Dépenses par CSP et catégorie" urlApi="http://statistiques.orisonm.fr/depenses"/>
-				<BarChart titreGraphique="Dépenses par catégorie" urlApi="http://statistiques.orisonm.fr/depenses/categories"/>
-				<BarChart titreGraphique="Dépenses par CSP" urlApi="http://statistiques.orisonm.fr/depenses/csp"/>
+				<StackedBar titreGraphique="Dépenses par CSP et catégorie" urlApi="https://statistiques.orisonm.fr/depenses"/>
+				<BarChart titreGraphique="Dépenses par catégorie" urlApi="https://statistiques.orisonm.fr/depenses/categories"/>
+				<BarChart titreGraphique="Dépenses par CSP" urlApi="https://statistiques.orisonm.fr/depenses/csp"/>
 				
     		</div>			
 			<br/>
 
 			<h2 className='lmj-title'>Panier moyen</h2>
 			<div className="App lmj-layout-inner"  >
-				<BarChart titreGraphique="Panier moyen par CSP" urlApi="http://statistiques.orisonm.fr/paniermoyen/categories"/>				
+				<BarChart titreGraphique="Panier moyen par CSP" urlApi="https://statistiques.orisonm.fr/paniermoyen/categories"/>				
     		</div>			
 			<br/>
 			<h2 className='lmj-title'>Export des datas</h2>

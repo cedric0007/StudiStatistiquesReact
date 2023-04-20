@@ -6,7 +6,7 @@ function App(props) {
   const token = "johndoe";
   const handleExport = (rows) => {
     setLoading(true);
-    const url = `http://statistiques.orisonm.fr/export_csv/${rows}`;
+    const url = `https://statistiques.orisonm.fr/export_csv/${rows}`;
     fetch(url, {
       method: "GET",
       headers: {
