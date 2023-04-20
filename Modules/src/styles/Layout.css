@@ -1,0 +1,6 @@
+.lmj-layout-inner {
+	display: flex;
+	flex-direction: row;
+	margin-left:20%;
+	text-align: center;
+}
