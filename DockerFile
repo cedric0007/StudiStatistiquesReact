@@ -1,9 +1,11 @@
 FROM node:alpine
 
-# WORKDIR /app
+
 
 COPY Modules/ /StudiStatistiques/Modules/
 
+
+# WORKDIR /app
 # COPY package*.json ./
 # RUN npm install
 
@@ -13,4 +15,4 @@ COPY Modules/ /StudiStatistiques/Modules/
 
 # EXPOSE 3000
 
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
