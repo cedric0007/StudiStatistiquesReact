@@ -14,7 +14,7 @@ function RowsInput({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="rows">Export Rows:</label>
+      <label htmlFor="rows">Nombre de lignes à exporter :</label>
       <input
         type="number"
         id="rows"

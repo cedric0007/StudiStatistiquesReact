@@ -28,8 +28,8 @@ function App(props) {
   return (
     <div>
       <RowsInput onSubmit={handleExport} />
-      <button onClick={handleExport} disabled={loading}>
-        {loading ? "Exporting..." : "Export Data"}
+      <button disabled="disabled">
+        {loading ? "Exporting..." : ""}
       </button>
     </div>
   );
