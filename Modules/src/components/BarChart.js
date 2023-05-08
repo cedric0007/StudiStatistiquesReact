@@ -36,16 +36,22 @@ console.log("users", users);
       acc.includes(elem.montant_total) ? acc : acc.concat(elem.montant_total),
     []
   )
+  
+  function randomColor(){
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var color = "rgb(" + x + "," + y + "," + z + ")"
+    return color;
+  }
+
   const data = {
     labels: categories,
     datasets: [
     {
       label: props.titreGraphique,
-      backgroundColor: 'rgba(75,192,192,1)',
-      borderColor: 'rgba(0,0,0,1)',
+      backgroundColor: randomColor(),
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(75,192,192,0.4)',
-      hoverBorderColor: 'rgba(0,0,0,1)',
       data: montants
     }
     ]

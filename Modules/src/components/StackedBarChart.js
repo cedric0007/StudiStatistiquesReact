@@ -73,14 +73,21 @@ const UsingFetch = (props) => {
         acc.includes(elem.classe_socio_professionnelle) ? acc : acc.concat(elem.classe_socio_professionnelle),
       []
     )
-
+    
+    function randomColor(){
+      var x = Math.floor(Math.random() * 256);
+      var y = Math.floor(Math.random() * 256);
+      var z = Math.floor(Math.random() * 256);
+      var color = "rgb(" + x + "," + y + "," + z + ")"
+      return color;
+    }
     // calculer le montant total par catégorie et CSP
     const datasets = donnees.reduce((acc, cur) => {
       // Trouver ou créer un objet pour le label actuel
       console.log("cur", cur);
       let obj = acc.find(obj => obj.label === cur.libelle);
       if (!obj) {
-        obj = { label: cur.libelle, backgruondColor : 'red', data: [] };
+        obj = { label: cur.libelle, backgroundColor : randomColor(), data: [] };
         acc.push(obj);
       }
       // Ajouter le montant à l'objet pour la classe socio-professionnelle actuelle
