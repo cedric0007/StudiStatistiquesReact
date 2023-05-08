@@ -67,3 +67,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# BUILD CONTAINER
+    Se placer dans le dossier et executer les commandes suivantes :
+    cd /StudiStatistiquesReact
+        git pull origin dev
+	    docker build -t studi_statistiques_react .
+
+# RUN AND CONNECT PORTS
+    docker run --rm -it -p 82:3000 -d --name react_studi_statistiques studi_statistiques_react:latest
+    docker network connect studistatistiques_default react_studi_statistiques
+    docker network connect docker_dev react_studi_statistiques
+
+    Se connecter au container
+        cd /StudiStatistiques/Modules
+            npm install
+            npm start
+
+        
+
+Installation indépendant de l'application python puis connexion au mysql créé via le docker-compose
+    docker network connect studistatistiques_default python_studi_statistiques
